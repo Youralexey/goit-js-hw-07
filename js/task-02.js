@@ -6,13 +6,11 @@ const ingredients = [
   'Зелень',
   'Приправы',
 ];
-
 const listEl = document.getElementById('ingredients');
-ingredients.forEach(
-  ingredient => {
+const markup = ingredients.map( ingredient => {
     const itemEl = document.createElement('li');
     itemEl.innerHTML = ingredient;
-    listEl.append(itemEl);
+    return itemEl
   }
 )
-
+listEl.append(...markup);
