@@ -14,3 +14,4 @@ const markup = ingredients.map( ingredient => {
   }
 )
 listEl.append(...markup);
+

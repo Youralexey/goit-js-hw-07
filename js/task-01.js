@@ -5,3 +5,6 @@ totalCategories.forEach(categories => {
     console.log(`Категория: ${categories.children[0].textContent}`)
     console.log(`Количество элементов: ${categories.children[1].children.length}`)}); 
 
+
+
+

@@ -16,23 +16,12 @@ const images = [
   },
 ];
 
-// const galleryItem = ({url, alt}) =>
-//     `<li><img src=${url} alt${alt}></li>`;
-// const galleryMarkup = images.reduce((acc, image) => acc + galleryItem(image), '');
 
-// const galleryList = document.querySelector('#gallery');
-// galleryList.insertAdjacentHTML("afterbegin", galleryMarkup);
-// galleryList.setAttribute("style", "list-style-type:none; display: flex;");
-
-
-const galleryItem = ({url, alt}) =>
+const galleryItem = ({ url, alt }) =>
   `<li><img src="${url}" alt="${alt}" width = 300 height = 200></li>`;
-const galleryEl = images.reduce(
-  (acc, item) => acc + galleryItem(item),
-  ""
-);
-const galleryList = document.querySelector("#gallery");
+const galleryEl = images.reduce((acc, el) => acc + galleryItem(el), "");
+const galleryList = document.getElementById('gallery');
 galleryList.insertAdjacentHTML("afterbegin", galleryEl);
 galleryList.style.listStyle = 'none';
 galleryList.style.display = 'flex';
-galleryList.style.justifyContent = 'space-around';
+galleryList.style.justifyContent = 'center'
